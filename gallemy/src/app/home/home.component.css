@@ -1,0 +1,53 @@
+main{
+    display: flex;
+    height: 87vh;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    background-color:#F5F5F5 ;
+    justify-content: space-evenly;
+    align-items: center;
+}
+h1{
+    font-size: 60px;
+    padding: 5px;
+    text-align: center;
+}
+.buttons{
+    display: flex;
+}
+.right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    background: rgba(0, 120, 178, 0.2);
+}
+.blue-smart{
+    color: #0078B2;
+}
+.buttons{
+    width: 28vw;
+    display: flex;
+    justify-content: space-between;
+}
+button{
+    width:12vw;
+    height: 40px;
+    border-radius:8px;
+    border: none;
+}
+.log{
+    border: solid 1px #0078B2;
+    color: #0078B2;
+    background-color: #F5F5F5;
+}
+.sign{
+    background-color: #0078B2;
+    color: #fff;
+}
+img{
+    width: 100%;
+}
