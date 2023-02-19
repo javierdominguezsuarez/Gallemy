@@ -1,0 +1,43 @@
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 60vh;
+}
+.email{
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.password{
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.submit{
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    width: 250px;
+    height: 25px;
+    border: none;
+    background-color: #e7e7e7;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+button{
+    height: 30px;
+    width: 12vw;;
+    border-radius:8px;
+    border: none;
+    background-color: #0078B2;
+    color: white;
+}

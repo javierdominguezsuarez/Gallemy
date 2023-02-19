@@ -1,0 +1,15 @@
+<form  [formGroup]="form" (ngSubmit)="onSubmit()">
+    <label class="email">
+        Email
+        <input placeholder="Email" formControlName="email" type="text" required autocomplete="on" >
+    </label>
+    <label class="password">
+        Password
+        <input placeholder="Password" formControlName="password" type="password" required autocomplete="on">
+    </label>
+    <label class="submit">
+        <button  type="submit">
+            Log in
+        </button>
+    </label>
+</form>

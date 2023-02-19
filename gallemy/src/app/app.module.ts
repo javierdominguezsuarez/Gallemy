@@ -10,6 +10,10 @@ import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
+import { LoginFormComponent } from './login-form/login-form.component';
+import {ReactiveFormsModule } from '@angular/forms';
+import { RegisterComponent } from './register/register.component';
+import { GalleryComponent } from './gallery/gallery.component';
 
 
 @NgModule({
@@ -18,7 +22,10 @@ import { HomeComponent } from './home/home.component';
     LoginComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    LoginFormComponent,
+    RegisterComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,
@@ -26,6 +33,7 @@ import { HomeComponent } from './home/home.component';
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

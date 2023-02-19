@@ -1,0 +1,3 @@
+<main>
+    <p>Hola</p>
+</main>
