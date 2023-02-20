@@ -1,3 +1,8 @@
 <main>
-    <p>Hola</p>
+    <input type="file" (change)="onFileSelected($event)">
+    <button (click)="onUploadFile()">Subir archivo</button>
+    <section *ngFor="let file of files">
+        <img [src]="file" >
+    </section>
+   
 </main>

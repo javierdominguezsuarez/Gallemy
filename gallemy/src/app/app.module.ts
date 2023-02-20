@@ -14,6 +14,7 @@ import { LoginFormComponent } from './login-form/login-form.component';
 import {ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 
 @NgModule({
@@ -32,8 +33,9 @@ import { GalleryComponent } from './gallery/gallery.component';
     AppRoutingModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
-    provideFirestore(() => getFirestore()),
-    ReactiveFormsModule
+    provideFirestore(() => getFirestore()), 
+    ReactiveFormsModule, 
+    provideStorage(() => getStorage()),
   ],
   providers: [],
   bootstrap: [AppComponent]

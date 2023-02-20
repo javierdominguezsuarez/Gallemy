@@ -1,4 +1,7 @@
 main{
     display: flex;
-    height: 87vh;
+    flex-direction: column;
+}
+img{
+    width: 30%;
 }

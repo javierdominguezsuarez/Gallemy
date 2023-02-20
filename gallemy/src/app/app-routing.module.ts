@@ -4,14 +4,25 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { AuthGuard, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 
+const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['']);
 const routes: Routes = [
 
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'gallery', component: GalleryComponent }
+  { 
+    path: 'gallery', component: GalleryComponent,
+    canActivate: [AuthGuard],
+    data: { authGuardPipe: redirectUnauthorizedToLogin } 
+  },
+  {
+    path: '**',
+    redirectTo: '',
+    pathMatch: 'full',
+  },
 ];
 
 @NgModule({
