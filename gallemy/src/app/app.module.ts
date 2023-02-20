@@ -15,6 +15,8 @@ import {ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { provideStorage,getStorage } from '@angular/fire/storage';
+import { UploaderComponent } from './uploader/uploader.component';
+import { UploadFormComponent } from './upload-form/upload-form.component';
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     HomeComponent,
     LoginFormComponent,
     RegisterComponent,
-    GalleryComponent
+    GalleryComponent,
+    UploaderComponent,
+    UploadFormComponent
   ],
   imports: [
     BrowserModule,

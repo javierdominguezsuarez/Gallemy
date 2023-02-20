@@ -11,6 +11,6 @@ export class UserService {
     this.user.next(user)
   }
   getUser() {
-    return this.user.asObservable();
+    return this.user.asObservable()
   }
 }

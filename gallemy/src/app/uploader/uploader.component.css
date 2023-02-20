@@ -1,0 +1,7 @@
+main{
+    height:87vh;
+    background-color: #F9FAFB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

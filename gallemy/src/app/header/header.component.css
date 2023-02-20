@@ -1,5 +1,6 @@
 
 nav{
+    font-family: sans-serif;
     display:flex ;
     flex-direction: row;
     align-items: center;
@@ -12,7 +13,14 @@ nav{
     top: 0;
     
 }
-section{
+.logged{
+    display:flex ;
+    justify-content: space-between;
+    padding: 8px;
+    width: 70vw;
+    align-items: center;
+}
+.unlogged{
     padding: 8px;
     width: 17vw;
     display: flex;
@@ -36,4 +44,12 @@ button{
 }
 h1{
     padding: 8px;
+}
+a{
+    color: rgb(21, 21, 23);
+    text-decoration: none;  
+    
+}
+a:hover{
+    color: #0078B2;
 }

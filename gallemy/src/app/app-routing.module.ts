@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { AuthGuard, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
+import { UploaderComponent } from './uploader/uploader.component';
 
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['']);
 const routes: Routes = [
@@ -13,6 +14,11 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+  { 
+    path: 'upload', component: UploaderComponent,
+    canActivate: [AuthGuard],
+    data: { authGuardPipe: redirectUnauthorizedToLogin } 
+  },
   { 
     path: 'gallery', component: GalleryComponent,
     canActivate: [AuthGuard],
