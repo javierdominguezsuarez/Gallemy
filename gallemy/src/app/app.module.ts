@@ -17,7 +17,8 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { provideStorage,getStorage } from '@angular/fire/storage';
 import { UploaderComponent } from './uploader/uploader.component';
 import { UploadFormComponent } from './upload-form/upload-form.component';
-
+import { ProgressBarComponent } from './progress-bar/progress-bar.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { UploadFormComponent } from './upload-form/upload-form.component';
     RegisterComponent,
     GalleryComponent,
     UploaderComponent,
-    UploadFormComponent
+    UploadFormComponent,
+    ProgressBarComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +42,7 @@ import { UploadFormComponent } from './upload-form/upload-form.component';
     provideFirestore(() => getFirestore()), 
     ReactiveFormsModule, 
     provideStorage(() => getStorage()),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

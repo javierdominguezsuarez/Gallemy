@@ -1,33 +1,78 @@
-<main>
-    <h2>Upload a pic to see it in your gallery</h2>
-    <section class="step-name">
-        <p>Step 1: Pic information</p>
-    </section>
-    <section class="progress">
-        <div class="segment"></div>
-        <div class="segment"></div>
-        <div class="segment"></div>
-    </section>
-    <section class="info">
-        <label>
-            Name of the pic
-            <input type="text">
-        </label>
-        <label>
-           Description
-            <input type="text">
-        </label>
-        <section class="info-sub">
-            <label class="sub-label">
-                Date of the pic
-                <input type="date">
+<!-- First Step Form -->
+
+<ng-template [ngIf]="step == 1">
+    <main>
+        <h2>Upload a pic to see it in your gallery</h2>
+        <app-progress-bar [step]="1" [sentence]="'Step 1: Pic information'"></app-progress-bar>
+        <section class="info">
+            <label>
+                Name of the pic
+                <input type="text" [(ngModel)]="form.name" placeholder="Insert the name of your pic">
             </label>
-            <label class="sub-label">
-                Category
-                <input type="text">
+            <label>
+               Description
+                <textarea type="text" [(ngModel)]="form.description"  placeholder="Insert the description of your pic"></textarea>
             </label>
+            <section class="info-sub">
+                <label class="sub-label">
+                    Date of the pic
+                    <input [(ngModel)]="form.date" type="date">
+                </label>
+                <label class="sub-label" for="categories">
+                    Category
+                    <select   [(ngModel)]="form.category" name="categories">
+                        <option value="Home">Home</option>
+                        <option value="Travels">Travels</option>
+                        <option value="Nature">Nature</option>
+                    </select>
+                </label>
+            </section>
         </section>
-    </section>
-    <input type="file" (change)="onFileSelected($event)">
-    <button (click)="onUploadFile()">Subir archivo</button>    
-</main>
+        <section class="form-footer-first">
+            <button (click)="onNextStep()">Next Step</button>    
+        </section>
+    </main>
+</ng-template>
+
+<!-- Second Step Form -->
+
+<ng-template [ngIf]="step == 2">
+    <main>
+        <h2>Upload a pic to see it in your gallery</h2>
+        <app-progress-bar [step]="2" [sentence]="'Step 2: Pic uploading'"></app-progress-bar>
+        <section class="uploader">
+            <p>Upload your pic here</p>
+            <div class="uploader-box">
+                <input type="file" class="file-input" (change)="onFileSelected($event)" #fileUpload>
+                <div class="uploader-button-box">
+                    <button class="upload-button" (click)="fileUpload.click()">Attach file</button>                
+                    <!--  <p>{{ selectedFile?.name && "Selected file: " + selectedFile?.name || "There is not a file attached"}}</p> -->
+                </div>
+            </div>
+            <p>{{ selectedFile?.name && "Selected file: " + selectedFile?.name || "There is not a file attached"}}</p>
+        </section>
+        <section class="form-footer">
+            <button class="back-button" (click)="onPreviousStep()">Back</button>
+            <button (click)="onNextStep()">Next Step</button>    
+        </section>
+    </main>
+</ng-template>
+
+<!-- Third Step Form -->
+
+<ng-template [ngIf]="step == 3">
+    <main>
+        <h2>Upload a pic to see it in your gallery</h2>
+        <app-progress-bar [step]="3" [sentence]="'Step 3: Pic confirmation'"></app-progress-bar>
+        <section class="preview">
+            <p>Do you like your picture?</p>
+            <div [ngStyle]="{'background-image': getUrl()}" class="preview-box">     
+                <img  *ngIf="imageSrc" [src]="sanitizer.bypassSecurityTrustResourceUrl(imageSrc)">               
+            </div>
+        </section>
+        <section class="form-footer">
+            <button class="back-button" (click)="onPreviousStep()">Back</button>
+            <button (click)="onUploadFile()">Upload</button>    
+        </section>
+    </main>
+</ng-template>

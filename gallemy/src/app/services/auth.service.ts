@@ -11,9 +11,9 @@ export class AuthService {
   login({email,password}: LoginData):Promise<UserCredential> {
     return signInWithEmailAndPassword(this.auth,email,password)
     .then((userCredential: UserCredential) => {
-      const user = userCredential.user;
+      const user = userCredential.user
       this.user.setUser(user)
-      return userCredential;
+      return userCredential
     })
   }
   register({ email, password }: LoginData) {

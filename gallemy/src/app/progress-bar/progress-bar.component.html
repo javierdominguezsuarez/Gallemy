@@ -1,0 +1,36 @@
+<ng-template [ngIf]="step == 1">
+    <section class="progress-component">
+        <section class="step-name">
+            <p>{{ sentence }}</p>
+        </section>
+        <section class="progress-first">
+            <div class="segment-first"></div>
+            <div class="segment-second"></div>
+            <div class="segment-third"></div>
+        </section>
+    </section>
+</ng-template>
+<ng-template [ngIf]="step == 2">
+    <section class="progress-component">
+        <section class="step-name">
+            <p>{{ sentence }}</p>
+        </section>
+        <section class="progress-second">
+            <div class="segment-first"></div>
+            <div class="segment-second"></div>
+            <div class="segment-third"></div>
+        </section>
+    </section>
+</ng-template>
+<ng-template [ngIf]="step == 3">
+    <section class="progress-component">
+        <section class="step-name">
+            <p>{{ sentence }}</p>
+        </section>
+        <section class="progress-third">
+            <div class="segment-first"></div>
+            <div class="segment-second"></div>
+            <div class="segment-third"></div>
+        </section>
+    </section>
+</ng-template>

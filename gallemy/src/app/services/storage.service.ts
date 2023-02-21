@@ -9,7 +9,7 @@ export class StorageService {
 
   private files = new BehaviorSubject<string[]>([])
   private storage = getStorage()
-
+  
   async uploadFile(file: File, path: string): Promise<string> {
     const storageRef = ref(this.storage, path)
     const snapshot = await uploadBytes(storageRef, file)
