@@ -5,8 +5,7 @@ import { StorageService } from '../services/storage.service';
 import { UserService } from '../services/user.service';
 import { DomSanitizer } from '@angular/platform-browser';
 import { PicInfo } from '../picInfo';
-
-
+import { StoreService } from '../services/store.service';
 @Component({
   selector: 'app-upload-form',
   templateUrl: './upload-form.component.html',
@@ -28,7 +27,7 @@ export class UploadFormComponent {
   }
   
 
-  constructor(private storageService: StorageService, private userService: UserService,private readonly router: Router,public sanitizer: DomSanitizer){}
+  constructor(private storageService: StorageService, private storeService: StoreService, private userService: UserService,private readonly router: Router,public sanitizer: DomSanitizer){}
   async ngOnInit(): Promise<void> {
     this.userService.getUser().subscribe(user => {
       this.user = user
@@ -49,8 +48,10 @@ export class UploadFormComponent {
         console.log(this.form)
       })
       .then(() => {
+        this.storeService.add(this.form)
         this.router.navigate(['gallery'])
         console.log("file uploaded")
+        this.storeService.getAll()
       })
  
     
