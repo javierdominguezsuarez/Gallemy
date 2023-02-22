@@ -1,5 +1,3 @@
 <main>
-    <article *ngFor="let file of files">
-        <img [src]="file" >
-    </article>   
+    <app-pic-card *ngFor="let file of files" [pic]="file"></app-pic-card>
 </main>

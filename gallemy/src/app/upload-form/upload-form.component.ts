@@ -51,7 +51,6 @@ export class UploadFormComponent {
         this.storeService.add(this.form)
         this.router.navigate(['gallery'])
         console.log("file uploaded")
-        this.storeService.getAll()
       })
  
     

@@ -1,0 +1,42 @@
+
+article{
+    width: 20vw;
+    height: 28vh;
+    border-radius: 8px;
+    position: relative;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.edit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 1vh;
+    right: 1vh;
+    height: 4vh;
+    width: 5vw;
+    background: rgba(51, 51, 51, 0.6);
+    border-radius:8px;
+    cursor: pointer;
+}
+.description{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    height: 6vh;
+    width: 20vw;
+    background: rgba(51, 51, 51, 0.6);
+    border-radius: 0px 0px 8px 8px;
+}
+p{  
+    padding: 10px;
+    font-size: 13px;
+    color: white;
+}
