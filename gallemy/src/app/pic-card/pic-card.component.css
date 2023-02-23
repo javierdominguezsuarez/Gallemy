@@ -24,6 +24,10 @@ img{
     border-radius:8px;
     cursor: pointer;
 }
+.edit:hover {
+    background: rgba(51, 51, 51, 0.7);
+    backdrop-filter: blur(10px);
+}
 .description{
     display: flex;
     align-items: center;
@@ -34,6 +38,18 @@ img{
     width: 20vw;
     background: rgba(51, 51, 51, 0.6);
     border-radius: 0px 0px 8px 8px;
+}
+a:hover .description{
+    background: rgba(51, 51, 51, 0.7);
+    backdrop-filter: blur(10px);
+}
+a:hover .edit{
+    background: rgba(51, 51, 51, 0.7);
+    backdrop-filter: blur(10px);
+}
+.description:hover{
+    background: rgba(51, 51, 51, 0.7);
+    backdrop-filter: blur(10px);
 }
 p{  
     padding: 10px;

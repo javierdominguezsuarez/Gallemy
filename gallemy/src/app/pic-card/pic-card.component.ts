@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core';
-import { PicInfo } from '../picInfo';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { PicInfoId } from '../picInfoId';
 
 @Component({
   selector: 'app-pic-card',
@@ -7,6 +7,10 @@ import { PicInfo } from '../picInfo';
   styleUrls: ['./pic-card.component.css']
 })
 export class PicCardComponent {
-@Input() pic : PicInfo
+  @Input() pic : PicInfoId
+  @Output() editEvent = new EventEmitter<string>();
+  editClick(id: string) {
+    this.editEvent.emit(id)
+  }
 
 }

@@ -1,4 +1,4 @@
-export class PicInfo {
+export class PicInfoId {
 
 
     constructor(

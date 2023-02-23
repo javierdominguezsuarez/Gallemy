@@ -4,26 +4,28 @@ import { User } from 'firebase/auth';
 import { StorageService } from '../services/storage.service';
 import { UserService } from '../services/user.service';
 import { DomSanitizer } from '@angular/platform-browser';
-import { PicInfo } from '../picInfo';
 import { StoreService } from '../services/store.service';
+import { PicInfoId } from '../picInfoId';
+
 @Component({
   selector: 'app-upload-form',
   templateUrl: './upload-form.component.html',
   styleUrls: ['./upload-form.component.css']
 })
+
 export class UploadFormComponent {
   @Input ()user: User | null
-
   selectedFile: File | null
   imageSrc: string | null
   step: number = 1
-  form: PicInfo = {
+  form: PicInfoId = {
     name: '',
     description: '',
     date: '',
     category: '',
     user: '',
-    url: ''
+    url: '',
+    id:''
   }
   
 

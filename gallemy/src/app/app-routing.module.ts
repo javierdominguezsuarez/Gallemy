@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { AuthGuard, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 import { UploaderComponent } from './uploader/uploader.component';
+import { PicDetailsComponent } from './pic-details/pic-details.component';
 
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['']);
 const routes: Routes = [
@@ -24,12 +25,17 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     data: { authGuardPipe: redirectUnauthorizedToLogin } 
   },
+  { 
+    path: 'gallery/:picId', component: PicDetailsComponent,
+    canActivate: [AuthGuard],
+    data: { authGuardPipe: redirectUnauthorizedToLogin } 
+  },
   {
     path: '**',
     redirectTo: '',
     pathMatch: 'full',
-  },
-];
+  }
+]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

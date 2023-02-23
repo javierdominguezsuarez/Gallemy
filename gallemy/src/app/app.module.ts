@@ -20,6 +20,8 @@ import { UploadFormComponent } from './upload-form/upload-form.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { FormsModule } from '@angular/forms';
 import { PicCardComponent } from './pic-card/pic-card.component';
+import { PicDetailsComponent } from './pic-details/pic-details.component';
+import { EditFormComponent } from './edit-form/edit-form.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { PicCardComponent } from './pic-card/pic-card.component';
     UploaderComponent,
     UploadFormComponent,
     ProgressBarComponent,
-    PicCardComponent
+    PicCardComponent,
+    PicDetailsComponent,
+    EditFormComponent
   ],
   imports: [
     BrowserModule,

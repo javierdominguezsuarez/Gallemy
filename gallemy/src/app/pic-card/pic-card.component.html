@@ -1,12 +1,13 @@
-<div>
-    <article>
-        <img [src]="pic.url">
-        <section class="edit">
+<article>
+    <a >
+        <img  [routerLink]="['/gallery', pic.id]" [src]="pic.url">
+        <section  (click)="editClick(pic.id)" class="edit">
             <p>Edit</p>
         </section>
         <section class="description">
-          <p>{{ pic.name }}</p>
-          <p>{{ pic.date }}</p>
+            <p>{{ pic.name }}</p>
+            <p>{{ pic.date }}</p>
         </section>
-    </article>
-</div>
+    </a>
+</article>
+
