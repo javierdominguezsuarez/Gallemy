@@ -31,7 +31,7 @@ npm run test
 👤 **Francisco Javier Dominguez Suarez**
 
 * Github: [@javidominguezsuarez](https://github.com/javidominguezsuarez)
-* LinkedIn: [@Francisco Javier Domínguez Suárez](linkedin.com/in/francisco-javier-domínguez-suárez-b309ba199)
+* LinkedIn: [@Francisco Javier Domínguez Suárez](https://www.linkedin.com/in/francisco-javier-dom%C3%ADnguez-su%C3%A1rez-b309ba199/)
 
 ## Show your support
 
