@@ -22,6 +22,7 @@ import { FormsModule } from '@angular/forms';
 import { PicCardComponent } from './pic-card/pic-card.component';
 import { PicDetailsComponent } from './pic-details/pic-details.component';
 import { EditFormComponent } from './edit-form/edit-form.component';
+import { CategoriesComponent } from './categories/categories.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { EditFormComponent } from './edit-form/edit-form.component';
     ProgressBarComponent,
     PicCardComponent,
     PicDetailsComponent,
-    EditFormComponent
+    EditFormComponent,
+    CategoriesComponent
   ],
   imports: [
     BrowserModule,

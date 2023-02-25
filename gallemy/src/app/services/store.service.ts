@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Firestore,  collection, where } from '@angular/fire/firestore';
-import { addDoc, doc, documentId, getDoc, getDocs, query, QuerySnapshot } from 'firebase/firestore';
+import { addDoc, doc, documentId, getDoc, getDocs, query, QuerySnapshot, setDoc } from 'firebase/firestore';
 import { PicInfo } from '../picInfo';
 import { PicInfoId } from '../picInfoId';
 
@@ -80,4 +80,9 @@ export class StoreService {
     return picInfoList;
   }
   
+  async update(id: string, updatedPic: PicInfoId): Promise<void> {
+    const docRef = doc(this.afs, 'images', id)
+    const updatedPicObj = Object.assign({}, updatedPic)
+    await setDoc(docRef, updatedPicObj)
+  }
 }

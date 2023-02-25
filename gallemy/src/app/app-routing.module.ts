@@ -7,6 +7,7 @@ import { RegisterComponent } from './register/register.component';
 import { AuthGuard, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 import { UploaderComponent } from './uploader/uploader.component';
 import { PicDetailsComponent } from './pic-details/pic-details.component';
+import { CategoriesComponent } from './categories/categories.component';
 
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['']);
 const routes: Routes = [
@@ -27,6 +28,11 @@ const routes: Routes = [
   },
   { 
     path: 'gallery/:picId', component: PicDetailsComponent,
+    canActivate: [AuthGuard],
+    data: { authGuardPipe: redirectUnauthorizedToLogin } 
+  },
+  { 
+    path: 'categories', component: CategoriesComponent,
     canActivate: [AuthGuard],
     data: { authGuardPipe: redirectUnauthorizedToLogin } 
   },

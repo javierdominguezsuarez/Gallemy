@@ -1,0 +1,47 @@
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    height: 84vh;
+    background-color: #F9FAFB;
+    row-gap: 20px;
+}
+section{
+    height: 75vh;
+    width: 26vw;
+    background-color: #fff;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4))
+}
+
+h1{
+    font-size: 60px;
+    color: #fff;
+}
+
+.home {
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../../assets/images/home.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .trips {
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../../assets/images/trips.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .beach {
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../../assets/images/beach.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+  

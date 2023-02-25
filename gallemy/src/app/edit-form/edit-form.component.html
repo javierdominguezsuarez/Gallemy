@@ -1,7 +1,6 @@
 <ng-template [ngIf]="step == 1">
     <main>
         <h2>Edit your picture here</h2>
-        <app-progress-bar [step]="1" [sentence]="'Step 1: Pic information'"></app-progress-bar>
         <section class="info">
             <label>
                 Name of the pic
@@ -27,7 +26,7 @@
             </section>
         </section>
         <section class="form-footer-first">
-            <button (click)="onNextStep()">Save changes</button>    
+            <button (click)="onSubmit()">Save changes</button>    
         </section>
     </main>
 </ng-template>

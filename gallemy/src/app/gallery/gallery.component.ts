@@ -29,6 +29,11 @@ export class GalleryComponent {
     this.idEdit= id
     console.log(id)
   }
+  async resetEdit(){
+    this.edition=false
+    const files = await this.storeService.getAllByUser(this.user?.email)
+    this.files = files
+  }
 }
 
 

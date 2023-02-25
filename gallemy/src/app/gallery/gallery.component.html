@@ -1,4 +1,4 @@
 <main>
     <app-pic-card *ngFor="let file of files" [pic]="file" (editEvent)="editPic($event)"></app-pic-card>
-    <app-edit-form *ngIf="edition" [id]="idEdit"></app-edit-form>
+    <app-edit-form *ngIf="edition" [id]="idEdit" (editSubmitEvent)="resetEdit()"></app-edit-form>
 </main>
